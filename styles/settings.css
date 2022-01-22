@@ -1,0 +1,94 @@
+/*  settings --start-- */
+.settings-container{
+    display: flex;
+    position: absolute; left: 100%; top: 10%;
+    background: transparent;
+    transform: translateX(0%);
+    width: clamp(100px, 100vw, 250px);
+    box-shadow: 0 0 20px 4px #b8b8b8;
+    transition: all ease-in-out .6s;
+    z-index: 2;
+}
+body.dark .settings-container{
+    box-shadow: 0 0 20px 0px #292929;
+}
+.settings-container.active{
+    transform: translateX(-100%);
+}
+
+
+
+
+    /*  settings-toggler --start-- */
+    .settings-container > .toggler{
+        border: none; border-radius: 2px;
+        color: var(--bg ); background: var(--color);
+        padding: 10px; font-size: 1rem; font-weight: 900;
+        transform : translateX(-100%); cursor: pointer ;
+        box-shadow: 0 0 20px 6px #b8b8b8;
+    }
+    body.dark .settings-container > .toggler{
+        box-shadow: 0 0 20px 0px #292929;
+    }
+    .settings-container.active > .toggler{
+        transform : translateX(0%);
+    }
+    /*  settings-toggler --end-- */
+
+
+
+
+    /*  settings-panel --start-- */
+    .settings-container > .settings-panel{
+        display: flex; justify-content: space-around; align-items:center;
+        width: 100%;
+        color: var(--color);
+        background:var(--bg);
+        transition: color ease .1s;
+    }
+    body.dark .settings-container > .settings-panel{
+        background: #434343;
+    }
+
+
+        /* setting --start--*/
+            .settings-container > .settings-panel > .setting{
+                width: 100%;
+                display: flex; align-items: center; justify-content: space-evenly;
+            }
+        /* setting --end--*/
+
+
+        /* theme --start-- */
+            /* theme-toggler --start--*/
+            .settings-container > .settings-panel > .theme > .theme-toggler{
+                width: 60px; height: 30px;
+                cursor: pointer;
+                background: #c1c1c1;
+                border-radius: 30px;
+                display: flex; align-items: center;
+            }
+            .settings-container > .settings-panel > .theme > .theme-toggler::before{
+                content: "";
+                cursor: pointer;
+                background: rgb(255, 255, 255); border-radius: 50%;
+                height: 100%; width: 50%;
+                transform: translateX(0%) scale(.93);
+                transition: all ease-in-out .4s;
+            }
+            body.dark .settings-container > .settings-panel > .theme > .theme-toggler::before{
+                transform: translateX(100%) scale(.93);
+                background: rgb(85, 85, 85);
+            }
+
+            /* theme-toggler --end--*/
+        /* theme --end-- */
+
+
+    /*  settings-panel --end-- */
+
+
+
+
+        
+/*  settings --end-- */

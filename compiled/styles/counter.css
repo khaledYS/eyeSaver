@@ -1,0 +1,90 @@
+/* counter-container --start--*/
+    .counter-container{
+    }
+    
+    /* counter --start--*/
+    .counter-container > .counter {
+        height: 60vh;
+    }
+
+        /* counter-span --start--*/
+        .counter-container > .counter > .counter-span{
+            color: var(--color);
+        }
+        .counter-container > .counter > .counter-span::before{
+                    margin: 0 auto;
+                    margin-top: 20px;
+                    content: attr(time);
+                    font-size: 12vw;
+                    color: inherit;
+                    display: flex;
+                    justify-content: center;align-items:center;
+                    width: 70vw;
+                    height: 40vh;
+                    text-align: center;
+                    border-radius: 40px;
+                    box-shadow:  16px 19px 43px 0px #b8b8b8;
+                    border: 5px solid #7f7f7f;
+                }
+                body.dark .counter-container > .counter > .counter-span::before{   
+                    border: 5px solid white;
+                    box-shadow:  16px 19px 43px 0px #393939;
+                }
+        /* counter-span --end--*/
+        
+        /* counter-controllers --start--*/
+        .counter-container > .counter-controllers {
+            width: 70vw;
+            margin: 0 auto;
+            display: flex; justify-content: space-evenly; align-items: center;
+        }
+
+            /* counter-controller | btns --start--*/
+            .counter-container > .counter-controllers > .controller {
+                padding: 10px 15px;
+                font-size: 1.4rem; font-weight: 500; color: var(--color) ;
+                background-color: var(--bg);
+                border-radius: 5px;
+                cursor: pointer;
+                box-shadow: 0 0 0 2.5px black, 13px 9px 20px 6px var(--box-shadow);;
+                outline: 0px solid var(--bg);
+                transition: all .4s ease-in-out, outline .1s ease-in-out;
+            }
+            .counter-container > .counter-controllers > .controller:hover {
+                transform: translate(4px, 4px);
+                box-shadow: -3px 3px 10px 0px var(--box-shadow);
+                outline: 2px solid var(--color);
+            }
+            .counter-container > .counter-controllers > .controller.mousedown {
+                transform: translate(4px, 4px);
+                transition: all linear .06s;
+                box-shadow: -1px 0px 6px 7px var(--box-shadow);
+                outline: 3px solid var(--color);
+            }
+            /* counter-controller | btns --end-- ||*/
+             /* counter-controller-resetTiming | btn --start*/
+             .counter-container > .counter-controllers > .resetTiming{
+                background: #ff000085;
+             }
+             /* counter-controller-resetTiming | btn --end-- ||*/
+             /* counter-controller-toggleStopAndPlay | btn --start*/
+             .counter-container > .counter-controllers > .toggleStopAndPlay{
+                background: #ffc900cc;
+             }
+             /* counter-controller-toggleStopAndPlay | btn --end-- ||*/
+             /* counter-controller-custome | btn --start*/
+             .counter-container > .counter-controllers > .custome{
+                background: #e0e0e0cc;
+             }
+             /* counter-controller-custome | btn --end-- ||*/
+
+        /* counter-controllers --end--*/
+
+    /* counter --end--*/
+
+/* counter-container --end--*/
+
+/* 16px 19px 43px 0px #b8b8b8; */
+
+
+/* #393939 */
